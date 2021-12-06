@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:wght@700&family=Poppins:wght@600&family=Raleway&family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@500;700&family=Playfair+Display:wght@700&family=Poppins:wght@600&family=Raleway&family=Roboto:wght@300;700&display=swap');
+
+html,
+body {
+    height: 100%;
+    width: 100;
+    margin: 0;
+    /* добавить цвет body */
+}
+
+.wrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1960px;
+    min-width: 1440px;
+    /* или все-таки max-width*/
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 300px;
+    margin: auto;
+}
+
+.header {
+    grid-area: header;
+    min-height: 70px;
+    background: rgb(235, 197, 148);
+    /*заменить цвет согласно макета*/
+}
+
+.header .menu-wrapper {
+    height: 100%;
+    min-height: 70px;
+    width: 100%;
+    max-width: 1160px;
+    background: dimgray;
+    /*убрать после создания макета*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    /* height: 62px; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 89%;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.header ul.menu {
+    max-height: 32px;
+    width: 400px;
+    min-width: none;
+    background: rgb(128, 119, 98);
+    /*убрать после создания макета*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.header ul.menu li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.header ul.menu li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 77%;
+    font-weight: 500;
+}
+
+.header ul.menu li a:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid rgba(92, 98, 236, 1);
+}
