@@ -4,15 +4,16 @@
 html,
 body {
     height: 100%;
-    width: 100;
+    width: 100%;
     margin: 0;
+    background: rgba(23, 23, 24, 1);
     /* добавить цвет body */
 }
 
 .wrapper {
     display: grid;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     max-height: 1960px;
     min-width: 1440px;
     /* или все-таки max-width*/
@@ -22,15 +23,12 @@ body {
         "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 70px 1fr 300px;
-    margin: auto;
 }
 
 /* HEADER ============================================= */
 .header {
     grid-area: header;
     min-height: 70px;
-    background: rgb(235, 197, 148);
-    /*заменить цвет согласно макета*/
 }
 
 .header .menu-wrapper {
@@ -38,8 +36,6 @@ body {
     min-height: 70px;
     width: 100%;
     max-width: 1160px;
-    background: dimgray;
-    /*убрать после создания макета*/
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -47,7 +43,8 @@ body {
     align-items: center;
 }
 
-.header .logo {
+.header .menu-wrapper .logo,
+.footer .footer__content .logo {
     /* height: 62px; */
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -59,9 +56,7 @@ body {
 .header ul.menu {
     max-height: 32px;
     width: 400px;
-    min-width: none;
-    background: rgb(128, 119, 98);
-    /*убрать после создания макета*/
+    /* min-width: none; */
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -104,7 +99,6 @@ body {
 /* MAIN ======================================================= */
 .main {
     grid-area: main;
-    background: cadetblue;
 }
 
 .main .aboutMe {
@@ -119,17 +113,17 @@ body {
     padding: 64px 0 128px 0;
 }
 
-.main .aboutMe .myPhoto {
+.aboutMe .myPhoto {
     grid-area: 1/1/2/2;
     max-width: 450px;
 }
 
-.main .aboutMe h1 {
+.aboutMe h1 {
     grid-area: 1/2/2/3;
     color: #FFFFFF;
 }
 
-.main .aboutMe .aboutMe__text {
+.aboutMe .aboutMe__text {
     grid-area: 2/2/3/3;
     max-height: 450px;
     max-width: 570px;
@@ -141,14 +135,12 @@ body {
     color: #FFFFFF;
 }
 
-.main .aboutMe a.aboutMe__text {
+.aboutMe a.aboutMe__text {
     text-decoration: none;
     color: #5C62EC;
 }
 
-.main .skills {
-    background: darkkhaki;
-    /*убрать цвет после верстки*/
+.skills {
     max-width: 1110px;
     margin: 0 auto;
     display: flex;
@@ -156,8 +148,8 @@ body {
     align-items: center;
 }
 
-.main .skills .block__title,
-.main .skills .skill__wrapper .skill__box .skill__name {
+.skills .block__title,
+.skills .skill__wrapper .skill__box .skill__name {
     font-family: 'DM Sans', sans-serif;
     font-size: 34px;
     line-height: 40px;
@@ -167,29 +159,24 @@ body {
     color: #FFFFFF;
 }
 
-.main .skills .skill__wrapper .skill__box .skill__name {
+.skills .skill__wrapper .skill__box .skill__name {
     margin-top: 10px;
 }
 
-.main .skills .skill__wrapper {
+.skills .skill__wrapper {
     width: 100%;
+    max-width: 1080px;
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    margin-bottom: 128px;
 }
 
-.main .skills .skill__wrapper .skill__box {
-    background: dimgrey;
-    /*удалить после верстки блока*/
+.skills .skill__wrapper .skill__box {
     padding: 24px;
-}
-
-.main .skills .skill__wrapper .skill__box .icon {
-    margin-left: 12px;
-}
-
-.main .skills .skill__wrapper .skill__box p {
+    background: #1C1E22;
+    border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 28px;
@@ -197,4 +184,102 @@ body {
     font-style: normal;
     letter-spacing: 0.44px;
     color: #FFFFFF;
+}
+
+.skills .skill__wrapper .skill__box .icon {
+    margin-left: 12px;
+}
+
+.skills .skill__wrapper .skill__box p {
+    /* font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.44px;
+    color: #FFFFFF; */
+}
+
+/* FOOTER ===================================================== */
+.footer {
+    grid-area: footer;
+    height: auto;
+    display: flex;
+}
+
+.footer__wrapper {
+    max-width: 1160px;
+    width: 100%;
+    min-height: 204px;
+    height: auto;
+    margin: 64px auto 32px auto;
+}
+
+.footer__content {
+    height: 100%;
+    max-height: 110px;
+    max-width: 840px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__wrapper .footer__content .footer__menu {
+    max-width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social_icon .footer__wrapper .footer__content .footer__menu .menu__item_blue,
+.footer__wrapper .footer__content .footer__menu .menu__item_white {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+}
+
+.footer__wrapper .footer__content .footer__menu .menu__item_blue {
+    color: rgba(133, 191, 209, 1);
+}
+
+.footer__wrapper .footer__content .footer__menu .menu__item_white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer__wrapper .footer__content .footer__menu .icons__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.footer__wrapper .footer__content .footer__menu .icons__wrapper .social__icon {
+    display: block;
+}
+
+.footer__wrapper .copyright {
+    margin-top: 64px;
+}
+
+.footer__wrapper #line {
+    color: #26292D;
+}
+
+.footer__wrapper .copyright__text {
+    display: block;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-align: left;
 }
