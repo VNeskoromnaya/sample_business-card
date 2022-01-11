@@ -25,6 +25,12 @@ body {
     grid-template-rows: 70px 1fr 300px;
 }
 
+@media screen and (max-width: 767px) {
+    .wrapper {
+        min-height: 3439px;
+    }
+}
+
 /* HEADER ============================================= */
 .header {
     grid-area: header;
@@ -124,7 +130,7 @@ body {
 }
 
 .aboutMe .aboutMe__text {
-    grid-area: 2/2/3/3;
+    grid-area: 1/2/3/3;
     max-height: 450px;
     max-width: 570px;
     font-family: 'DM Sans', sans-serif;
@@ -200,9 +206,56 @@ body {
     color: #FFFFFF; */
 }
 
+@media screen and (max-width: 767px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .aboutMe {
+        /* width: 100%; */
+        /* max-width: 1160px; */
+        max-width: 350px;
+        max-height: 1326px;
+        display: flex;
+        flex-direction: column;
+        padding: 32px 16px 64px 16px;
+        margin: 0;
+    }
+
+    .aboutMe .myPhoto {
+        max-width: 360px;
+        max-height: 400px;
+    }
+
+    .aboutMe .aboutMe__text {
+        max-height: 720px;
+        max-width: 360px;
+    }
+
+    .skills {
+        /*поработать с этим параметром*/
+        max-width: 350px;
+        /*поработать с этим параметром*/
+        margin: 0;
+        max-height: 1484px;
+    }
+
+    .skills .skill__wrapper {
+        width: 100%;
+        max-width: 362px;
+    }
+
+    .skills .skill__wrapper .skill__box {
+        max-width: 330px;
+        max-height: 206px;
+    }
+}
+
 /* FOOTER ===================================================== */
 .footer {
     grid-area: footer;
+    border-top: 1px solid #A0A0A1;
     height: auto;
     display: flex;
 }
