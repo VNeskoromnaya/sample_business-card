@@ -226,15 +226,21 @@ body {
 
 .skills .skill__wrapper {
     width: 100%;
-    max-width: 1080px;
+    /* max-width: 1080px; */
     margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
     margin-bottom: 128px;
 }
 
 .skills .skill__wrapper .skill__box {
+    width: 27%;
+    max-width: 345px;
     padding: 24px;
     background: #1C1E22;
     border-radius: 8px;
@@ -245,6 +251,15 @@ body {
     font-style: normal;
     letter-spacing: 0.44px;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1020px) {
+    .skills .skill__wrapper {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 128px;
+        gap: 26px;
+    }
 }
 
 .skills .skill__wrapper .skill__box .icon {
