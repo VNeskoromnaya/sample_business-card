@@ -10,6 +10,8 @@ body {
 }
 
 .wrapper {
+    min-height: 3500px;
+    max-width: 100%;
     padding: 0 40px;
     display: grid;
     grid-template-areas:
@@ -146,38 +148,46 @@ body {
 /* MAIN ======================================================= */
 .main {
     grid-area: main;
-}
-
-.myPhoto-wrp {
+    height: 100%;
     width: 100%;
 }
 
 .main .aboutMe {
     width: 100%;
     max-width: 1160px;
-    height: 740px;
-    display: grid;
-    grid-template-columns: 47% 1fr;
-    grid-template-rows: 70px 1fr;
+    max-height: 740px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 70px;
-    margin: 0 auto;
     padding: 64px 0 128px 0;
+    margin: 0 auto;
 }
 
-.aboutMe .myPhoto {
-    grid-area: 1/1/2/2;
+.aboutMe .myPhoto-wrp {
+    max-width: 100%;
+}
+
+.aboutMe .myPhoto-wrp .myPhoto {
+    width: 100%;
     max-width: 450px;
 }
 
 .aboutMe h1 {
-    grid-area: 1/2/2/3;
     color: #FFFFFF;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 71px;
+    /* identical to box height, or 118% */
+    letter-spacing: -0.5px;
 }
 
 .aboutMe .aboutMe__text {
-    grid-area: 1/2/3/3;
-    max-height: 450px;
+    /* max-height: 400px; */
     max-width: 570px;
+    text-align: justify;
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 28px;
@@ -251,31 +261,83 @@ body {
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .myPhoto-wrp {
+        min-width: 300px;
+    }
+
+    .aboutMe h1 {
+        font-size: 3.75vw;
+        line-height: 4.4vw;
+        /* identical to box height, or 118% */
+    }
+
+    .aboutMe .aboutMe__text {
+        font-size: 1em;
+        line-height: 1.75em;
+        font-weight: 500;
+        letter-spacing: 0.15px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
     .main {
         display: flex;
         flex-direction: column;
     }
 
     .main .aboutMe {
-        /* width: 100%; */
-        /* max-width: 1160px; */
-        max-width: 350px;
-        max-height: 1326px;
         display: flex;
         flex-direction: column;
-        padding: 32px 16px 64px 16px;
         margin: 0;
+        gap: 50px;
     }
 
-    .aboutMe .myPhoto {
-        max-width: 360px;
-        max-height: 400px;
+    .aboutMe h1 {
+        text-align: center;
+        margin: 10px 0 30px 0;
+    } 
+
+    .aboutMe .aboutMe__text {
+        font-size: 1.2em;
+        line-height: 1.75em;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .aboutMe {
+        max-width: 350px;
+        /* max-height: 1326px; */
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 40px;
+    }
+
+    .aboutMe h1 {
+        text-align: center;
+        font-size: 2.2em;
+        line-height: 1.5em;
+        /* identical to box height, or 118% */
     }
 
     .aboutMe .aboutMe__text {
         max-height: 720px;
         max-width: 360px;
+        font-size: 1em;
+        line-height: 1.5em;
     }
 
     .skills {
