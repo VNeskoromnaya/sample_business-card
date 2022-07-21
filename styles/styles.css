@@ -207,6 +207,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* padding: 0px 165px 128px; */
+    gap: 60px;
 }
 
 .skills .block__title,
@@ -235,7 +237,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 128px;
+    /* margin-bottom: 128px; */
 }
 
 .skills .skill__wrapper .skill__box {
@@ -294,6 +296,11 @@ body {
         letter-spacing: 0.15px;
         color: #FFFFFF;
     }
+
+    .skills .skill__wrapper .skill__box {
+        width: 40%;
+        max-width: 345px;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
@@ -318,6 +325,16 @@ body {
         font-size: 1.2em;
         line-height: 1.75em;
         font-weight: 500;
+    }
+
+    .skills {
+        margin: 600px 0 0 0;
+        gap: 30px;
+    }
+
+    .skills .skill__wrapper .skill__box {
+        width: 100%;
+        max-width: 430px;
     }
 }
 
@@ -360,16 +377,19 @@ body {
         /*поработать с этим параметром*/
         /* max-width: 350px; */
         /*поработать с этим параметром*/
-        margin: 0;
+        margin: 360px 0 0 0;
         max-height: 1484px;
     }
 
     .skills .skill__wrapper {
         width: 100%;
         max-width: 362px;
+        padding: 0px 16px 64px;
+        gap: 32px;
     }
 
     .skills .skill__wrapper .skill__box {
+        width: 100%;
         max-width: 330px;
         max-height: 206px;
     }
