@@ -115,7 +115,7 @@ body {
         height: 100vh;
         right: -40px;
         top: -20px;
-        background-color: #3f51b5;;
+        background-color: #2f41a3;
         z-index: 100;
     }
 
@@ -133,11 +133,11 @@ body {
     }
 
     .dropdown-content a {
-        color: rgb(171, 180, 225);;
+        color: rgb(180 192 255);
     }
 
     .dropdown-content a:hover {
-        color: rgba(92, 98, 236, 1);
+        color: rgb(106, 111, 238);
         font-weight: bold;
         text-decoration: underline;
     }
@@ -208,7 +208,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* padding: 0px 165px 128px; */
-    gap: 60px;
+    gap: 40px;
 }
 
 .skills .block__title,
@@ -241,7 +241,7 @@ body {
 }
 
 .skills .skill__wrapper .skill__box {
-    width: 27%;
+    width: 28%;
     max-width: 345px;
     padding: 24px;
     background: #1C1E22;
@@ -297,13 +297,33 @@ body {
         color: #FFFFFF;
     }
 
+    .skills {
+        gap: 25px;
+    }
+
+    .skills .block__title {
+        margin: 10px 0 0 0;
+        font-size: 1.7em;
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+
     .skills .skill__wrapper .skill__box {
         width: 40%;
         max-width: 345px;
     }
+
+    .skills .skill__wrapper .skill__box .skill__name {
+        font-size: 1.7em;
+        line-height: 2em;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
+    .wrapper {
+        min-height: 3439px;
+    }
+
     .main {
         display: flex;
         flex-direction: column;
@@ -321,7 +341,8 @@ body {
         margin: 10px 0 30px 0;
     } 
 
-    .aboutMe .aboutMe__text {
+    .aboutMe .aboutMe__text,
+    .skills .skill__wrapper .skill__box p {
         font-size: 1.2em;
         line-height: 1.75em;
         font-weight: 500;
@@ -332,15 +353,29 @@ body {
         gap: 30px;
     }
 
+    .skills .block__title {
+        margin: 70px 0 0 0;
+        font-size: 2em;
+        font-size: 1.8em;
+        line-height: 2em;
+        }
+
     .skills .skill__wrapper .skill__box {
         width: 100%;
         max-width: 430px;
+    }
+
+    .skills .skill__wrapper .skill__box .skill__name {
+        font-size: 1.75em;
+        line-height: 2.2em;
+        font-weight: 300;
     }
 }
 
 @media screen and (max-width: 499px) {
     .wrapper {
         padding: 0 30px;
+        min-height: 3600px;
     }
 
     .main {
@@ -356,17 +391,18 @@ body {
         flex-direction: column;
         margin: 0;
         padding: 32px 0 64px 0;
-        gap: 40px;
+        gap: 15px;
     }
 
     .aboutMe h1 {
         text-align: center;
-        font-size: 2.2em;
-        line-height: 1.5em;
+        font-size: 2.1em;
+        line-height: 1.4em;
         /* identical to box height, or 118% */
     }
 
-    .aboutMe .aboutMe__text {
+    .aboutMe .aboutMe__text, 
+    .skills .skill__wrapper .skill__box p {
         max-height: 720px;
         max-width: 360px;
         font-size: 1em;
@@ -377,8 +413,14 @@ body {
         /*поработать с этим параметром*/
         /* max-width: 350px; */
         /*поработать с этим параметром*/
-        margin: 360px 0 0 0;
+        margin: 400px 0 0 0;
         max-height: 1484px;
+        gap:0;
+    }
+
+    .skills .block__title {
+        margin: 10px 0 0 0;
+        font-size: 1.7em;
     }
 
     .skills .skill__wrapper {
@@ -391,7 +433,12 @@ body {
     .skills .skill__wrapper .skill__box {
         width: 100%;
         max-width: 330px;
-        max-height: 206px;
+    }
+
+    .skills .skill__wrapper .skill__box .skill__name {
+        font-size: 1.5em;
+        line-height: 1.3em;
+        font-weight: normal;
     }
 }
 
